@@ -1,0 +1,179 @@
+.dashnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  gap: 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.dashnav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.dashnav-brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--accent-subtle);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dashnav-brand-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.dashnav-brand-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.dashnav-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.dashnav-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  position: relative;
+}
+.dashnav-icon-btn:hover { background: var(--bg-elevated); color: var(--text-primary); }
+
+.dashnav-bell { position: relative; }
+.dashnav-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  border-radius: var(--radius-full);
+  background: var(--red);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg-primary);
+}
+
+.dashnav-profile {
+  position: relative;
+  margin-left: 6px;
+}
+
+.dashnav-profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px 6px 6px;
+  border-radius: var(--radius-full);
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.dashnav-profile-btn:hover { background: var(--bg-elevated); border-color: var(--border); }
+
+.dashnav-avatar-img, .dashnav-avatar-fallback {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dashnav-avatar-img { object-fit: cover; border: 2px solid var(--border); }
+.dashnav-avatar-fallback {
+  background: var(--accent-subtle);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.78rem;
+}
+
+.dashnav-profile-text {
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.25;
+}
+.dashnav-profile-name { font-size: 0.85rem; font-weight: 700; color: var(--text-primary); }
+.dashnav-profile-role { font-size: 0.72rem; color: var(--text-muted); text-transform: capitalize; }
+
+.dashnav-chevron { color: var(--text-muted); transition: transform var(--transition); display: none; }
+.dashnav-chevron.open { transform: rotate(180deg); }
+
+.dashnav-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 170px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 60;
+}
+.dashnav-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font);
+  transition: background var(--transition);
+}
+.dashnav-menu button:hover { background: var(--bg-elevated); }
+.dashnav-menu-danger { color: var(--red) !important; }
+.dashnav-menu-danger:hover { background: var(--red-subtle) !important; }
+
+@media (min-width: 640px) {
+  .dashnav-profile-text { display: flex; }
+  .dashnav-chevron { display: block; }
+}
+
+@media (min-width: 860px) {
+  .dashnav { padding: 18px 32px; }
+}

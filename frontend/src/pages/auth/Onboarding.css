@@ -1,0 +1,13 @@
+.onboarding-page { min-height:100vh; display:flex; align-items:center; justify-content:center; background:var(--bg-primary); padding:24px; }
+.onboarding-container { width:100%; max-width:420px; display:flex; flex-direction:column; gap:32px; overflow:hidden; position:relative; }
+.skip-btn { align-self:flex-end; font-size:0.85rem; color:var(--text-muted); font-family:var(--font); background:none; border:none; cursor:pointer; transition:color var(--transition); }
+.skip-btn:hover { color:var(--text-primary); }
+.slides-wrapper { display:flex; transition:transform 0.4s ease; }
+.slide { min-width:100%; display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center; padding:0 8px; }
+.slide-emoji { width:80px; height:80px; border-radius:24px; display:flex; align-items:center; justify-content:center; font-size:2.5rem; }
+.slide-title { font-size:1.5rem; font-weight:800; color:var(--text-primary); letter-spacing:-0.02em; }
+.slide-body { font-size:0.92rem; color:var(--text-secondary); line-height:1.6; max-width:300px; }
+.dots { display:flex; justify-content:center; gap:8px; }
+.dot { width:8px; height:8px; border-radius:50%; background:var(--border); cursor:pointer; transition:all var(--transition); }
+.dot.active { background:var(--accent); width:24px; border-radius:4px; }
+.onboarding-btn { border-radius:var(--radius-full); padding:16px; font-size:1rem; }

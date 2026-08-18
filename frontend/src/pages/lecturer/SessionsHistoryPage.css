@@ -1,0 +1,25 @@
+.sh-content { padding: 20px; padding-bottom: 40px; }
+.sh-loading { display: flex; align-items: center; justify-content: center; padding: 60px; color: var(--text-muted); }
+.sh-empty { text-align: center; padding: 60px; color: var(--text-muted); font-size: 0.88rem; }
+.spin-anim { animation: spin 1s linear infinite; }
+.sh-list { display: flex; flex-direction: column; gap: 8px; }
+.sh-row { display: flex; align-items: center; justify-content: space-between; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; gap: 12px; }
+.sh-left { flex: 1; }
+.sh-code { font-size: 0.92rem; font-weight: 700; color: var(--text-primary); }
+.sh-name { font-size: 0.75rem; color: var(--text-muted); margin-top: 1px; }
+.sh-meta { display: flex; align-items: center; gap: 4px; font-size: 0.7rem; color: var(--text-muted); margin-top: 5px; font-family: var(--font-mono); }
+.sh-right { display: flex; align-items: center; gap: 10px; }
+.sh-count { display: flex; align-items: center; gap: 4px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); }
+.sh-export { width: 32px; height: 32px; border-radius: var(--radius-sm); background: var(--bg-elevated); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted); cursor: pointer; transition: all var(--transition); }
+.sh-export:hover { border-color: var(--accent); color: var(--accent); }
+
+
+@media (min-width: 860px) {
+  .sh-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

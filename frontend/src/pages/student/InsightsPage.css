@@ -1,0 +1,238 @@
+.insights-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 40px;
+}
+
+.insights-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: var(--text-muted);
+}
+
+.spin-anim { animation: spin 1s linear infinite; }
+
+/* Pattern card */
+.pattern-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pattern-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.pattern-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.pattern-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.risk-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--amber-subtle);
+  color: var(--amber);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(245,158,11,0.25);
+}
+
+.pattern-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.p-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.p-stat span {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.streak-info {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.streak-info strong {
+  color: var(--amber);
+}
+
+/* AI card */
+.ai-insight-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-color: rgba(168,85,247,0.2);
+  background: linear-gradient(135deg, var(--bg-card), rgba(168,85,247,0.04));
+}
+
+.ai-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(168,85,247,0.15);
+  color: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ai-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.ai-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.ai-btn {
+  gap: 8px;
+  font-size: 0.88rem;
+}
+
+/* Heatmap */
+.heatmap-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.heatmap-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot.green { background: var(--green); }
+.dot.amber { background: var(--amber); }
+.dot.red { background: var(--red); }
+
+/* Course breakdown */
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.breakdown-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.breakdown-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.breakdown-code {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.breakdown-name {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.breakdown-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.breakdown-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.8s ease;
+}
+
+.breakdown-pct {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--green);
+  font-family: var(--font-mono);
+  min-width: 36px;
+  text-align: right;
+}
+
+.breakdown-pct.red { color: var(--red); }
+
+
+@media (min-width: 860px) {
+  .insights-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

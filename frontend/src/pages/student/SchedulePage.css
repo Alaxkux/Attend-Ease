@@ -1,0 +1,31 @@
+.schedule-content { padding:20px; display:flex; flex-direction:column; gap:16px; padding-bottom:40px; }
+.schedule-loading { display:flex; align-items:center; justify-content:center; padding:60px; color:var(--text-muted); }
+.schedule-empty { display:flex; flex-direction:column; align-items:center; gap:12px; padding:60px 20px; text-align:center; color:var(--text-muted); font-size:0.88rem; }
+.schedule-hint { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:16px; font-size:0.82rem; color:var(--text-muted); text-align:center; line-height:1.5; }
+.spin-anim { animation:spin 1s linear infinite; }
+.day-tabs { display:flex; gap:6px; overflow-x:auto; padding-bottom:2px; scrollbar-width:none; }
+.day-tabs::-webkit-scrollbar { display:none; }
+.day-tab { flex-shrink:0; padding:8px 16px; border-radius:var(--radius-full); font-size:0.82rem; font-weight:600; font-family:var(--font); cursor:pointer; border:1.5px solid var(--border); background:var(--bg-card); color:var(--text-muted); transition:all var(--transition); }
+.day-tab.active { background:var(--accent); border-color:var(--accent); color:#fff; box-shadow:var(--shadow-accent); }
+.day-label { font-size:1rem; font-weight:700; color:var(--text-primary); }
+.schedule-list { display:flex; flex-direction:column; gap:12px; }
+.schedule-row { display:flex; gap:12px; align-items:stretch; }
+.schedule-time-col { display:flex; flex-direction:column; align-items:center; gap:4px; min-width:44px; padding-top:4px; }
+.sched-start { font-size:0.68rem; font-weight:700; color:var(--green); font-family:var(--font-mono); }
+.sched-end { font-size:0.68rem; font-weight:600; color:var(--text-muted); font-family:var(--font-mono); }
+.sched-line { flex:1; width:1px; background:var(--border); min-height:20px; }
+.schedule-card { flex:1; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:14px 16px; border-left:3px solid var(--accent); transition:border-color var(--transition); }
+.sched-code { font-size:0.92rem; font-weight:700; color:var(--text-primary); }
+.sched-name { font-size:0.78rem; color:var(--text-muted); margin-top:2px; }
+.sched-meta { display:flex; align-items:center; gap:4px; font-size:0.72rem; color:var(--text-muted); margin-top:5px; }
+
+
+@media (min-width: 860px) {
+  .schedule-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
