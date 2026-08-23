@@ -67,7 +67,7 @@ export default function LecturerDashboard() {
           <div className="modal-card" onClick={e => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Create New Course</h3>
-              <button className="btn-ghost" onClick={() => setShowCreate(false)}>✕</button>
+              <button className="modal-close-btn" onClick={() => setShowCreate(false)}>✕</button>
             </div>
             <div className="input-group">
               <label>Course Code</label>

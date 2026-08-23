@@ -113,7 +113,7 @@ export default function HistoryPage() {
           <div className="modal-card" onClick={e => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Submit Excuse</h3>
-              <button className="btn-ghost" onClick={() => setExcuseModal(null)}><X size={18} /></button>
+              <button className="modal-close-btn" onClick={() => setExcuseModal(null)}><X size={18} /></button>
             </div>
             <div className="excuse-session-info">
               <span className="h-code">{excuseModal.courseCode}</span>

@@ -60,7 +60,7 @@ export default function StudentCoursesPage() {
           <div className="modal-card" onClick={e => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Enroll in a Course</h3>
-              <button className="btn-ghost" onClick={() => setShowEnroll(false)}><X size={18} /></button>
+              <button className="modal-close-btn" onClick={() => setShowEnroll(false)}><X size={18} /></button>
             </div>
             <p className="modal-sub">Enter the enrollment code provided by your lecturer</p>
             <input

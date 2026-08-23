@@ -25,12 +25,7 @@
 .excuse-session-info { display:flex; flex-direction:column; gap:3px; background:var(--bg-elevated); border-radius:var(--radius-md); padding:10px 12px; }
 .excuse-textarea { resize:vertical; min-height:100px; }
 .excuse-note { font-size:0.75rem; color:var(--text-muted); line-height:1.4; margin-top:-4px; }
-.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); display:flex; align-items:flex-end; justify-content:center; z-index:200; animation:fadeIn 0.2s ease; }
-.modal-card { width:100%; max-width:480px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl) var(--radius-xl) 0 0; padding:24px 20px 40px; display:flex; flex-direction:column; gap:14px; animation:fadeUp 0.3s ease; }
-.modal-header { display:flex; align-items:center; justify-content:space-between; }
-.modal-header h3 { font-size:1.05rem; font-weight:700; }
-.btn-ghost { display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:var(--radius-sm); color:var(--text-muted); background:var(--bg-elevated); border:1px solid var(--border); cursor:pointer; transition:all var(--transition); }
-.btn-ghost:hover { color:var(--text-primary); }
+/* .modal-overlay / .modal-card / .modal-header / .modal-close-btn now defined globally in globals.css */
 
 
 @media (min-width: 860px) {
