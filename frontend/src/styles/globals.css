@@ -387,6 +387,18 @@ h3 { font-weight: 700; font-size: 1.05rem; }
 }
 .modal-close-btn:hover { color: var(--text-primary); border-color: var(--accent); }
 
+.coming-soon-pill {
+  flex-shrink: 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: var(--border);
+  color: var(--text-muted);
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 @media (min-width: 720px) {
   .modal-overlay { align-items: center; padding: 20px; }
   .modal-card { border-radius: var(--radius-xl); padding: 28px; box-shadow: var(--shadow-lg); }

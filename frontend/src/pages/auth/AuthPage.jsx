@@ -49,12 +49,16 @@ export default function AuthPage() {
       const result = await register({ name: form.name, email: form.email, password: form.password, role, department: form.department, ...(role === "student" ? { matricNumber: form.matricOrStaff } : { staffId: form.matricOrStaff }) });
       setShowReview(false);
       if (result.requiresVerification) {
+        toast.success(`Account created! Welcome, ${form.name.split(" ")[0]} 🎉`);
         navigate("/verify-email", { state: { userId: result.userId, email: form.email, pendingApproval: result.requiresApproval } });
       }
     } catch (err) {
       const data = err.response?.data;
       setShowReview(false);
-      if (data?.requiresVerification) return navigate("/verify-email", { state: { userId: data.userId, email: form.email } });
+      if (data?.requiresVerification) {
+        toast.success(`Account created! Welcome, ${form.name.split(" ")[0]} 🎉`);
+        return navigate("/verify-email", { state: { userId: data.userId, email: form.email } });
+      }
       toast.error(data?.message || "Something went wrong");
     } finally { setLoading(false); }
   };
@@ -90,7 +94,7 @@ export default function AuthPage() {
         </div>
 
         <div className="role-toggle">
-          {[{id:"student",label:"Student",icon:<GraduationCap size={15}/>},{id:"lecturer",label:"Lecturer",icon:<BookOpen size={15}/>},{id:"admin",label:"Admin",icon:<Shield size={15}/>}].map(r => (
+          {[{id:"student",label:"Student",icon:<GraduationCap size={15}/>},{id:"lecturer",label:"Lecturer",icon:<BookOpen size={15}/>}].map(r => (
             <button key={r.id} className={`role-btn ${role === r.id ? "active" : ""}`} onClick={() => setRole(r.id)}>
               {r.icon} {r.label}
             </button>

@@ -35,4 +35,14 @@ router.put("/:id/read", auth, async (req, res) => {
   }
 });
 
+// Clear all notifications for this user
+router.delete("/clear-all", auth, async (req, res) => {
+  try {
+    await Notification.deleteMany({ user: req.user._id });
+    res.json({ message: "All notifications cleared" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 module.exports = router;

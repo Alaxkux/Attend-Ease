@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { Search, Bell, Sun, Moon, ChevronDown, User, LogOut } from "lucide-react";
+import { Bell, Sun, Moon, ChevronDown, User, LogOut } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
 import { useAuth } from "../../context/AuthContext";
 import ConfirmModal from "./ConfirmModal";
 import api from "../../utils/api";
-import toast from "react-hot-toast";
 import "./DashNav.css";
 
 export default function DashNav({ icon, brandTitle, brandSubtitle, notificationsPath = "/notifications" }) {
@@ -49,18 +48,14 @@ export default function DashNav({ icon, brandTitle, brandSubtitle, notifications
     <>
       <header className="dashnav">
         <div className="dashnav-brand">
-          {/* <div className="dashnav-brand-icon">{icon}</div>
+          <div className="dashnav-brand-icon">{icon}</div>
           <div>
             <h1 className="dashnav-brand-title">{brandTitle}</h1>
             {brandSubtitle && <span className="dashnav-brand-sub">{brandSubtitle}</span>}
-          </div> */}
+          </div>
         </div>
 
         <div className="dashnav-actions">
-          <button className="dashnav-icon-btn" title="Search (coming soon)" onClick={() => toast("Search is coming soon", { icon: "🔍" })}>
-            <Search size={18} />
-          </button>
-
           <button className="dashnav-icon-btn dashnav-bell" title="Notifications" onClick={() => navigate(notificationsPath)}>
             <Bell size={18} />
             {unread > 0 && <span className="dashnav-badge">{unread > 99 ? "99+" : unread}</span>}

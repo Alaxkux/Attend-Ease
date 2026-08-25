@@ -2,9 +2,11 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import { ThemeProvider } from "./context/ThemeContext";
+import ScrollToTop from "./components/shared/ScrollToTop";
 
 // Auth
 import AuthPage from "./pages/auth/AuthPage";
+import AdminLoginPage from "./pages/auth/AdminLoginPage";
 import VerifyEmail from "./pages/auth/VerifyEmail";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import ResetPassword from "./pages/auth/ResetPassword";
@@ -66,6 +68,7 @@ function AppRoutes() {
     <Routes>
       {/* Public */}
       <Route path="/" element={user ? <Navigate to={defaultPath} replace/> : <AuthPage/>}/>
+      <Route path="/admin234" element={user ? <Navigate to={defaultPath} replace/> : <AdminLoginPage/>}/>
       <Route path="/verify-email" element={<VerifyEmail/>}/>
       <Route path="/forgot-password" element={<ForgotPassword/>}/>
       <Route path="/reset-password" element={<ResetPassword/>}/>
@@ -113,6 +116,7 @@ export default function App() {
     <ThemeProvider>
       <AuthProvider>
         <BrowserRouter>
+          <ScrollToTop/>
           <AppRoutes/>
           <Toaster position="top-center" toastOptions={{
             style:{background:"var(--bg-card)",color:"var(--text-primary)",border:"1px solid var(--border)",fontFamily:"var(--font)",fontSize:"0.88rem",borderRadius:"12px",padding:"12px 16px"},

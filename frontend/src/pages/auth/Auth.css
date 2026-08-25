@@ -23,7 +23,7 @@
 .auth-hero { display: none; }
 
 @media (min-width: 960px) {
-  .auth-page {
+  .auth-page:has(.auth-hero) {
     justify-content: stretch;
     align-items: stretch;
     padding: 0;
@@ -120,14 +120,14 @@
     color: rgba(255,255,255,0.75);
   }
 
-  .auth-page > .auth-container {
+  .auth-page:has(.auth-hero) > .auth-container {
     flex: 1 1 50%;
-    max-width: 50%;
+    max-width: 460px;
     max-height: 100vh;
     overflow-y: auto;
     margin: 0 auto;
-    padding: 40px 40px 40px;
-    gap: 50px;
+    padding: 32px 40px 24px;
+    gap: 14px;
   }
 
   .auth-page .auth-logo { margin-bottom: 0; }
@@ -374,17 +374,6 @@
   position: relative;
   justify-content: center;
   gap: 10px;
-}
-
-.coming-soon-pill {
-  position: absolute;
-  right: 16px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  background: var(--border);
-  color: var(--text-muted);
-  padding: 2px 8px;
-  border-radius: var(--radius-full);
 }
 
 .auth-switch {
